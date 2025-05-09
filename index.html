@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inglês com Método Comprovado | Aulas Online Personalizadas | Prof. Samar Ferraz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+        }
+        .feature-icon {
+            @apply text-4xl mb-4 text-blue-600;
+        }
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+        }
+        .package-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+        }
+        .popular-package {
+            border: 2px solid #f59e0b;
+            position: relative;
+            overflow: hidden;
+        }
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: #f59e0b;
+            color: white;
+            padding: 0.25rem 2rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            transform: rotate(45deg);
+            width: 120px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .gold-text {
+            color: #f59e0b;
+        }
+        .gold-bg {
+            background-color: #f59e0b;
+        }
+        .gold-border {
+            border-color: #f59e0b;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .faq-item {
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .faq-question {
+            background: linear-gradient(90deg, #f8fafc 0%, #ffffff 100%);
+            padding: 16px 20px;
+            cursor: pointer;
+            position: relative;
+        }
+        .faq-question:after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
+            color: #3b82f6;
+            transition: all 0.3s;
+        }
+        .faq-question.active:after {
+            content: '-';
+            color: #f59e0b;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+        }
+        .contact-form {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .contact-info {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+        .btn-gold {
+            background: linear-gradient(90deg, #f59e0b 0%, #e67e22 100%);
+            transition: all 0.3s;
+        }
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6 0%, #f59e0b 100%);
+            border-radius: 2px;
+        }
+        .floating-label {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .floating-label input, 
+        .floating-label select, 
+        .floating-label textarea {
+            font-size: 16px;
+            padding: 20px 16px 8px;
+            display: block;
+            width: 100%;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: #f8fafc;
+            transition: all 0.2s;
+        }
+        .floating-label input:focus, 
+        .floating-label select:focus, 
+        .floating-label textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+        .floating-label label {
+            color: #64748b;
+            font-size: 14px;
+            position: absolute;
+            pointer-events: none;
+            left: 16px;
+            top: 16px;
+            transition: 0.2s ease all;
+        }
+        .floating-label input:focus ~ label, 
+        .floating-label input:valid ~ label,
+        .floating-label select:focus ~ label,
+        .floating-label select:valid ~ label,
+        .floating-label textarea:focus ~ label,
+        .floating-label textarea:valid ~ label {
+            top: 4px;
+            font-size: 12px;
+            color: #3b82f6;
+        }
+        .price-card {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .price-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 20px;
+        }
+        .price-body {
+            padding: 20px;
+        }
+        .price-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .price-feature i {
+            margin-right: 8px;
+            color: #3b82f6;
+        }
+        .price-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin: 20px 0;
+        }
+        .price-discount {
+            color: #10b981;
+            font-weight: bold;
+        }
+        .price-per-lesson {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511958190889" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full z-50 floating-button shadow-lg flex items-center justify-center w-16 h-16">
+        <i class="fab fa-whatsapp text-2xl"></i>
+        <span class="sr-only">WhatsApp</span>
+    </a>
+
+    <!-- Header -->
+    <header class="hero-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://i.imgur.com/qG0m7H5.jpeg'); background-size: cover; background-position: center;"></div>
+        <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <div class="inline-block bg-blue-800 bg-opacity-50 text-blue-100 px-4 py-2 rounded-full mb-4">
+                        <span class="font-medium">Método Comprovado</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Domine o Inglês com <span class="gold-text">Aulas Online Personalizadas</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-blue-100 mb-8">
+                        Graduada pela USP | Certificada por Cambridge e Michigan
+                    </p>
+                    <p class="text-lg mb-8 max-w-2xl">
+                        Transforme seu inglês com um método adaptado às suas necessidades, flexível e com suporte individualizado - mesmo que você já tenha tentado (e falhado) antes!
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#packages" class="gold-bg hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 inline-block text-center btn-gold">
+                            AGENDE SUA AULA TESTE POR R$1!
+                        </a>
+                        <a href="#video" class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-4 px-8 rounded-full text-lg transition duration-300 inline-block text-center">
+                            <i class="fas fa-play-circle mr-2"></i> ASSISTA AO VÍDEO
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://i.imgur.com/qG0m7H5.jpeg" 
+                             alt="Professora Samar Ferraz" 
+                             class="rounded-xl shadow-2xl w-full max-w-md border-4 border-white transform rotate-1 hover:rotate-0 transition duration-500"
+                             id="hero-image">
+                        <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-md">
+                            <div class="flex space-x-3">
+                                <img src="https://i.imgur.com/fe0N8uP.png" alt="USP" class="h-10" id="usp-logo">
+                                <img src="https://i.imgur.com/YgAg0TF.png" alt="Cambridge" class="h-10" id="cambridge-logo">
+                                <img src="https://i.imgur.com/F1sJKX5.png" alt="Michigan" class="h-10" id="michigan-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Credibility Badges -->
+    <section class="bg-white py-8 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+                <div class="flex items-center bg-blue-50 px-4 py-2 rounded-full">
+                    <i class="fas fa-graduation-cap text-blue-600 text-xl mr-2"></i>
+                    <span class="font-semibold text-blue-800">Graduada pela USP</span>
+                </div>
+                <div class="flex items-center bg-blue-50 px-4 py-2 rounded-full">
+                    <i class="fas fa-certificate text-blue-600 text-xl mr-2"></i>
+                    <span class="font-semibold text-blue-800">Certificada por Cambridge</span>
+                </div>
+                <div class="flex items-center bg-blue-50 px-4 py-2 rounded-full">
+                    <i class="fas fa-award text-blue-600 text-xl mr-2"></i>
+                    <span class="font-semibold text-blue-800">Certificada por Michigan</span>
+                </div>
+                <div class="flex items-center bg-blue-50 px-4 py-2 rounded-full">
+                    <i class="fas fa-chalkboard-teacher text-blue-600 text-xl mr-2"></i>
+                    <span class="font-semibold text-blue-800">+1.000 alunos transformados</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Storytelling Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/3 mb-12 lg:mb-0 flex justify-center">
+                    <div class="relative">
+                        <img src="https://i.imgur.com/F6Hm2Nk.png" 
+                             alt="Samar Ferraz ensinando" 
+                             class="rounded-xl shadow-lg w-full max-w-xs border-4 border-blue-100 transform -rotate-2 hover:rotate-0 transition duration-500"
+                             id="profile-image">
+                        <div class="absolute -bottom-4 -left-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md">
+                            <p class="font-bold">20+ anos de experiência</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-2/3 lg:pl-16">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6 section-title">Conheça a Professora Samar Ferraz</h2>
+                    <blockquote class="text-lg leading-relaxed mb-8 bg-blue-50 p-6 rounded-xl border-l-4 border-blue-600">
+                        <p class="mb-4">
+                            "Graduada em Linguística Aplicada pela USP, com experiências de ensino no exterior, desenvolvi um método único que combina técnicas de imersão com um plano de estudos personalizado."
+                        </p>
+                        <p>
+                            "Minha jornada começou há 20 anos quando deixei o Brasil para ensinar inglês em diferentes países. Percebi que os métodos tradicionais não funcionavam para todos e criei uma abordagem adaptada às reais necessidades dos alunos."
+                        </p>
+                    </blockquote>
+                    <div class="mb-8">
+                        <h3 class="font-bold mb-4 text-lg">Conecte-se comigo:</h3>
+                        <div class="flex space-x-6">
+                            <a href="https://www.linkedin.com/in/samarferraz" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                                <i class="fab fa-linkedin text-3xl"></i>
+                            </a>
+                            <a href="https://www.instagram.com/samarferraz" class="text-pink-600 hover:text-pink-800 transition duration-300">
+                                <i class="fab fa-instagram text-3xl"></i>
+                            </a>
+                            <a href="https://wa.me/5511958190889" class="text-green-600 hover:text-green-800 transition duration-300">
+                                <i class="fab fa-whatsapp text-3xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="border-l-4 gold-border pl-4">
+                            <p class="font-bold text-lg">Samar Ferraz</p>
+                            <p class="text-gray-600">Professora de Inglês | Especialista em Fluência Acelerada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-gradient-to-b from-blue-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4 section-title">Benefícios Exclusivos do Método</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Um método comprovado que vai além da gramática tradicional, focando no que realmente importa para sua fluência
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-8 rounded-xl package-card">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Aulas 100% Online</h3>
+                    <p class="text-gray-600">
+                        Flexibilidade total para aprender de qualquer lugar, no horário que melhor se adapta à sua rotina. Aulas dinâmicas e interativas via Zoom or Google Meet.
+                    </p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-white p-8 rounded-xl package-card">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-user-edit text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Material Personalizado</h3>
+                    <p class="text-gray-600">
+                        Conteúdo adaptado aos seus interesses e objetivos profissionais. Aprenda o vocabulário e situações reais do seu dia a dia, sem decoreba inútil.
+                    </p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="bg-white p-8 rounded-xl package-card">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-comments text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Foco em Conversação</h3>
+                    <p class="text-gray-600">
+                        Pratique desde o primeiro dia com situações reais. Ganhe confiança para falar em qualquer contexto, desde viagens até reuniões de negócios.
+                    </p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="bg-white p-8 rounded-xl package-card">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Objetivos Específicos</h3>
+                    <p class="text-gray-600">
+                        Seja para viagens, negócios, entrevistas ou provas como IELTS e TOEFL. Temos um plano de estudos específico para seu objetivo.
+                    </p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="bg-white p-8 rounded-xl package-card">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Garantia de 7 Dias</h3>
+                    <p class="text-gray-600">
+                        <span class="font-bold">7 dias para cancelar sem burocracia!</span> Se não gostar da primeira aula, devolvemos 100% do seu investimento.
+                    </p>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="bg-white p-8 rounded-xl package-card">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Suporte Individualizado</h3>
+                    <p class="text-gray-600">
+                        Dúvidas entre as aulas? Tenha acesso direto à professora via WhatsApp para tirar suas questões quando precisar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4 section-title">Planos de Aula de Inglês 2025</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Escolha o plano que melhor se adapta aos seus objetivos e ritmo de aprendizado
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Trial Lesson -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3 class="text-xl font-bold">Aula Experimental</h3>
+                        <p class="text-blue-100">Teste de Nivelamento</p>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-value">
+                            R$ 1,00
+                            <div class="price-per-lesson">(Valor original: R$ 100,00)</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">Descubra seu nível de inglês e experimente nosso método de ensino!</p>
+                        <div class="mb-6">
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Avaliação de habilidades</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>30-50 minutos de duração</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Cupom de 99% de desconto</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 btn-primary block text-center">
+                            Agendar Aula
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Monthly Plan - 1 Lesson/Week -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3 class="text-xl font-bold">Plano Mensal</h3>
+                        <p class="text-blue-100">1 Aula por Semana</p>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-value">
+                            R$ 800,00
+                            <div class="price-per-lesson">(R$ 200 por aula)</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">Aprendizado no seu ritmo com 4 aulas de 50 minutos por mês.</p>
+                        <div class="mb-6">
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>4 aulas mensais</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Material personalizado</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Acesso a grupo exclusivo</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 btn-primary block text-center">
+                            Quero Este Plano
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Monthly Plan - 2 Lessons/Week -->
+                <div class="price-card popular-package">
+                    <div class="popular-badge">MAIS VENDIDO</div>
+                    <div class="price-header">
+                        <h3 class="text-xl font-bold">Plano Intensivo</h3>
+                        <p class="text-blue-100">2 Aulas por Semana</p>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-value">
+                            R$ 1.440,00
+                            <div class="price-per-lesson">(R$ 180 por aula)</div>
+                            <div class="price-discount">10% de desconto</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">Resultados rápidos com 8 aulas de 50 minutos por mês.</p>
+                        <div class="mb-6">
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>8 aulas mensais</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Foco em conversação</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Suporte via WhatsApp</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full gold-bg hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 btn-gold block text-center">
+                            Quero Economizar
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quarterly Plan - 2 Lessons/Week -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3 class="text-xl font-bold">Plano Trimestral</h3>
+                        <p class="text-blue-100">2 Aulas por Semana</p>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-value">
+                            R$ 4.320,00
+                            <div class="price-per-lesson">(R$ 180 por aula)</div>
+                            <div class="price-discount">10% de desconto</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">24 aulas em 3 meses com avaliações mensais.</p>
+                        <div class="mb-6">
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>24 aulas em 3 meses</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Avaliações mensais</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Feedback detalhado</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 btn-primary block text-center">
+                            Investir no Futuro
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Semester Plan - 2 Lessons/Week -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3 class="text-xl font-bold">Plano Semestral</h3>
+                        <p class="text-blue-100">2 Aulas por Semana</p>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-value">
+                            R$ 7.680,00
+                            <div class="price-per-lesson">(R$ 160 por aula)</div>
+                            <div class="price-discount">20% de desconto</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">48 aulas em 6 meses para alcançar a fluência.</p>
+                        <div class="mb-6">
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>48 aulas em 6 meses</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Avaliações bimestrais</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Materiais complementares</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 btn-primary block text-center">
+                            Alcançar Fluência
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Complete Package - 3 Levels -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3 class="text-xl font-bold">Pacote Completo</h3>
+                        <p class="text-blue-100">3 Níveis (Básico ao Avançado)</p>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-value">
+                            R$ 11.520,00
+                            <div class="price-per-lesson">(R$ 160 por aula)</div>
+                            <div class="price-discount">20% de desconto</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">144 aulas cobrindo todos os níveis de inglês.</p>
+                        <div class="mb-6">
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>144 aulas completas</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Avaliações entre níveis</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Suporte contínuo</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 btn-primary block text-center">
+                            Inglês Completo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Plans -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-8">
+                <!-- Monthly Plan - 3 Lessons/Week -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3 class="text-xl font-bold">Plano Intensivo</h3>
+                        <p class="text-blue-100">3 Aulas por Semana</p>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-value">
+                            R$ 1.800,00
+                            <div class="price-per-lesson">(R$ 150 por aula)</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">12 aulas mensais para aprendizado acelerado.</p>
+                        <div class="mb-6">
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>12 aulas mensais</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Foco em produção oral</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Material exclusivo</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 btn-primary block text-center">
+                            Aprender Rápido
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quarterly Plan - 3 Lessons/Week -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3 class="text-xl font-bold">Plano Trimestral Intensivo</h3>
+                        <p class="text-blue-100">3 Aulas por Semana</p>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-value">
+                            R$ 5.400,00
+                            <div class="price-per-lesson">(R$ 150 por aula)</div>
+                            <div class="price-discount">10% de desconto</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">36 aulas em 3 meses para imersão completa.</p>
+                        <div class="mb-6">
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>36 aulas em 3 meses</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Avaliações mensais</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Plano de estudo adaptado</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 btn-primary block text-center">
+                            Mergulhar no Inglês
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Semester Plan - 3 Lessons/Week -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3 class="text-xl font-bold">Plano Semestral Intensivo</h3>
+                        <p class="text-blue-100">3 Aulas por Semana</p>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-value">
+                            R$ 10.800,00
+                            <div class="price-per-lesson">(R$ 150 por aula)</div>
+                            <div class="price-discount">10% de desconto</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">72 aulas em 6 meses para fluência intensiva.</p>
+                        <div class="mb-6">
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>72 aulas em 6 meses</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Avaliações bimestrais</span>
+                            </div>
+                            <div class="price-feature">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Suporte adicional</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 btn-primary block text-center">
+                            Fluência Intensiva
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Complete Intensive Package -->
+            <div class="max-w-4xl mx-auto mt-8">
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3 class="text-xl font-bold">Pacote Completo Intensivo</h3>
+                        <p class="text-blue-100">3 Níveis (Básico ao Avançado)</p>
+                    </div>
+                    <div class="price-body">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 mb-6 md:mb-0">
+                                <div class="price-value">
+                                    R$ 18.000,00
+                                    <div class="price-per-lesson">(R$ 125 por aula)</div>
+                                    <div class="price-discount">20% de desconto</div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2">
+                                <p class="text-gray-700 mb-4">144 aulas intensivas cobrindo todos os níveis de inglês.</p>
+                                <div class="mb-6">
+                                    <div class="price-feature">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span>144 aulas intensivas</span>
+                                    </div>
+                                    <div class="price-feature">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span>Avaliações detalhadas</span>
+                                    </div>
+                                    <div class="price-feature">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span>Materiais avançados</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full gold-bg hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 btn-gold block text-center">
+                            Inglês Completo Intensivo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4 section-title">Depoimentos de Alunos</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Histórias reais de pessoas que transformaram suas vidas com o domínio do inglês
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://i.imgur.com/GHI3456.jpg" alt="João" class="w-16 h-16 rounded-full mr-4 border-2 border-blue-200" id="testimonial1-img">
+                        <div>
+                            <h4 class="font-bold text-lg">João, Engenheiro</h4>
+                            <div class="flex gold-text">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic relative pl-6">
+                        <i class="fas fa-quote-left text-blue-200 absolute left-0 top-0 text-2xl"></i>
+                        "As aulas da Samar mudaram minha carreira! Em 3 meses, consegui minha promoção para uma posição internacional que exigia inglês fluente. O método dela de focar no vocabulário técnico da minha área fez toda a diferença."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://i.imgur.com/JKL7890.jpg" alt="Ana" class="w-16 h-16 rounded-full mr-4 border-2 border-blue-200" id="testimonial2-img">
+                        <div>
+                            <h4 class="font-bold text-lg">Ana, Estudante</h4>
+                            <div class="flex gold-text">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic relative pl-6">
+                        <i class="fas fa-quote-left text-blue-200 absolute left-0 top-0 text-2xl"></i>
+                        "Finalmente consegui tirar minha nota máxima no IELTS! Depois de tentar sozinha várias vezes, as aulas personalizadas da Samar me deram exatamente o que eu precisava para melhorar. Em 2 meses de aulas, alcancei o nível que precisava para minha bolsa de estudos."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-xl testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://i.imgur.com/MNO1234.jpg" alt="Carlos" class="w-16 h-16 rounded-full mr-4 border-2 border-blue-200" id="testimonial3-img">
+                        <div>
+                            <h4 class="font-bold text-lg">Carlos, Executivo</h4>
+                            <div class="flex gold-text">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic relative pl-6">
+                        <i class="fas fa-quote-left text-blue-200 absolute left-0 top-0 text-2xl"></i>
+                        "Como executivo, não tinha tempo para métodos tradicionais. A abordagem da Samar focada em reuniões e apresentações em inglês me deu confiança para liderar minha equipe global. Em 6 meses, estava conduzindo reuniões inteiras em inglês sem dificuldade."
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <div class="inline-block bg-blue-100 text-blue-800 px-8 py-4 rounded-full shadow-sm">
+                    <i class="fas fa-users mr-2"></i> Mais de <span class="font-bold">1.000 alunos</span> transformados em 10 anos de carreira!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="py-16 bg-gradient-to-b from-blue-900 to-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold mb-6 section-title">Assista e Conheça o Método</h2>
+                    <p class="text-lg mb-8">
+                        Neste vídeo de 2 minutos, eu explico como meu método difere dos cursos tradicionais e como ele pode te ajudar a alcançar a fluência mais rápido.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                            <span>Método adaptado ao seu ritmo de aprendizado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                            <span>Foco nas suas necessidades específicas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                            <span>Resultados comprovados em menos tempo</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="gold-bg hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 inline-block btn-gold">
+                        <i class="fas fa-calendar-check mr-2"></i> AGENDAR AULA EXPERIMENTAL
+                    </a>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4 section-title">Perguntas Frequentes</h2>
+                <p class="text-lg text-gray-600">
+                    Tire suas dúvidas sobre o método e como funcionam as aulas
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- Question 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como funcionam as aulas online?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="p-6">
+                            <p class="text-gray-700">
+                                As aulas são realizadas via Zoom ou Google Meet, com compartilhamento de tela, materiais interativos e gravação disponível para revisão. Você só precisa de um computador ou celular com internet. Cada aula tem duração de 50 minutos e é totalmente personalizada conforme seu nível e objetivos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Qual é o nível mínimo para começar?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="p-6">
+                            <p class="text-gray-700">
+                                Trabalhamos com todos os níveis, do básico ao avançado. Na primeira aula, fazemos uma avaliação detalhada para entender seu nível atual (mesmo que seja zero) e objetivos específicos. A partir disso, criamos um plano de estudos totalmente adaptado às suas necessidades.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Posso reagendar aulas?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="p-6">
+                            <p class="text-gray-700">
+                                Sim, com 24h de antecedência você pode reagendar sem custos. Entendemos que imprevistos acontecem e buscamos sempre a flexibilidade para nossos alunos. Basta nos avisar por WhatsApp ou e-mail e remarcaremos para outro horário disponível.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo até eu ver resultados?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="p-6">
+                            <p class="text-gray-700">
+                                A maioria dos alunos percebe melhora na confiança para falar em 4-6 semanas. Resultados mais significativos geralmente aparecem após 3 meses de aulas consistentes, dependendo da sua dedicação. Nosso método é focado em resultados práticos desde a primeira aula.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como funciona a garantia?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="p-6">
+                            <p class="text-gray-700">
+                                Se após a primeira aula você não estiver satisfeito, basta nos avisar em até 7 dias que devolvemos 100% do seu investimento sem questionamentos. Queremos apenas alunos que realmente se identifiquem com o método e estejam comprometidos com seus resultados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto contact-form">
+                <div class="md:flex">
+                    <div class="md:w-1/2 contact-info text-white p-8">
+                        <h2 class="text-3xl font-bold mb-6">Pronto para Transformar Seu Inglês?</h2>
+                        <p class="mb-6 text-blue-100">
+                            Preencha o formulário ao lado e eu entrarei em contato para agendarmos sua aula experimental por R$1.
+                        </p>
+                        <div class="mb-8">
+                            <h3 class="font-bold mb-4 text-lg">Dúvidas ou informações?</h3>
+                            <div class="space-y-3">
+                                <p class="flex items-center">
+                                    <i class="fas fa-whatsapp mr-3 text-xl"></i> (11) 95819-0889
+                                </p>
+                                <p class="flex items-center">
+                                    <i class="fas fa-envelope mr-3 text-xl"></i> suporte@samarferraz.com
+                                </p>
+                                <p class="flex items-center">
+                                    <i class="fas fa-clock mr-3 text-xl"></i> Seg-Sex: 9h às 18h
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-4">Formas de Pagamento</h3>
+                            <div class="flex flex-wrap gap-4">
+                                <i class="fab fa-cc-visa text-2xl"></i>
+                                <i class="fab fa-cc-mastercard text-2xl"></i>
+                                <i class="fab fa-cc-amex text-2xl"></i>
+                                <i class="fab fa-cc-paypal text-2xl"></i>
+                                <i class="fas fa-barcode text-2xl"></i>
+                                <i class="fab fa-pix text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8 bg-white">
+                        <form action="mailto:vendas@samarferraz.com" method="post" enctype="text/plain">
+                            <div class="floating-label">
+                                <input type="text" id="name" name="name" required>
+                                <label for="name">Seu Nome Completo</label>
+                            </div>
+                            
+                            <div class="floating-label">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Seu Melhor Email</label>
+                            </div>
+                            
+                            <div class="floating-label">
+                                <input type="tel" id="phone" name="phone">
+                                <label for="phone">WhatsApp (opcional)</label>
+                            </div>
+                            
+                            <div class="floating-label">
+                                <select id="package" name="package" required>
+                                    <option value=""></option>
+                                    <option value="trial">Aula Experimental - R$1</option>
+                                    <option value="1-month">1 Mês - 1 Aula/Semana - R$800</option>
+                                    <option value="2-months">1 Mês - 2 Aulas/Semana - R$1.440</option>
+                                    <option value="3-months">3 Meses - 2 Aulas/Semana - R$4.320</option>
+                                    <option value="6-months">6 Meses - 2 Aulas/Semana - R$7.680</option>
+                                    <option value="complete">Pacote Completo (3 Níveis) - R$11.520</option>
+                                    <option value="intensive-1-month">1 Mês - 3 Aulas/Semana - R$1.800</option>
+                                    <option value="intensive-3-months">3 Meses - 3 Aulas/Semana - R$5.400</option>
+                                    <option value="intensive-6-months">6 Meses - 3 Aulas/Semana - R$10.800</option>
+                                    <option value="intensive-complete">Pacote Completo Intensivo - R$18.000</option>
+                                </select>
+                                <label for="package">Pacote de Interesse</label>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full transition duration-300 btn-primary">
+                                <i class="fas fa-paper-plane mr-2"></i> QUERO COMEÇAR AGORA
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <p class="font-bold text-2xl mb-2">Samar Ferraz</p>
+                    <p>Aulas de Inglês Online Personalizadas</p>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="https://www.instagram.com/samarferraz" class="text-white hover:text-amber-300 transition duration-300 text-xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/samarferraz" class="text-white hover:text-amber-300 transition duration-300 text-xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/5511958190889" class="text-white hover:text-amber-300 transition duration-300 text-xl">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:suporte@samarferraz.com" class="text-white hover:text-amber-300 transition duration-300 text-xl">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-3 bg-blue-800 px-4 py-2 rounded-full">
+                    <img src="https://i.imgur.com/KguRoNn.png" alt="Hotmart" class="h-8" id="hotmart-logo">
+                    <span class="text-sm">Pagamento 100% Seguro</span>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 pt-8 text-center">
+                <p>© 2023 Samar Ferraz - Todos os direitos reservados</p>
+                <p class="mt-4">
+                    <a href="#" class="hover:text-amber-300 transition duration-300 mx-2">Termos de Uso</a> | 
+                    <a href="#" class="hover:text-amber-300 transition duration-300 mx-2">Política de Privacidade</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Configuração de imagens (facilmente editáveis)
+        const images = {
+            hero: "https://i.imgur.com/qG0m7H5.jpeg",
+            profile: "https://i.imgur.com/F6Hm2Nk.png",
+            teaching: "https://i.imgur.com/ABC5678.jpg",
+            videoThumbnail: "https://i.imgur.com/XIHykeD.png",
+            testimonial1: "https://i.imgur.com/GHI3456.jpg",
+            testimonial2: "https://i.imgur.com/JKL7890.jpg",
+            testimonial3: "https://i.imgur.com/MNO1234.jpg",
+            uspLogo: "https://i.imgur.com/fe0N8uP.png",
+            cambridgeLogo: "https://i.imgur.com/YgAg0TF.png",
+            michiganLogo: "https://i.imgur.com/F1sJKX5.png",
+            hotmartLogo: "https://i.imgur.com/KguRoNn.png"
+        };
+
+        // Atribuição dinâmica das imagens
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hero image
+            document.getElementById('hero-image').src = images.hero;
+            
+            // Profile image
+            document.getElementById('profile-image').src = images.profile;
+            
+            // Testimonials images
+            document.getElementById('testimonial1-img').src = images.testimonial1;
+            document.getElementById('testimonial2-img').src = images.testimonial2;
+            document.getElementById('testimonial3-img').src = images.testimonial3;
+            
+            // Institution logos
+            document.getElementById('usp-logo').src = images.uspLogo;
+            document.getElementById('cambridge-logo').src = images.cambridgeLogo;
+            document.getElementById('michigan-logo').src = images.michiganLogo;
+            
+            // Hotmart logo
+            document.getElementById('hotmart-logo').src = images.hotmartLogo;
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const item = question.parentElement;
+                
+                if (question.classList.contains('active')) {
+                    question.classList.remove('active');
+                    answer.style.maxHeight = null;
+                } else {
+                    // Close all other open items first
+                    document.querySelectorAll('.faq-question').forEach(q => {
+                        q.classList.remove('active');
+                        q.nextElementSibling.style.maxHeight = null;
+                    });
+                    
+                    question.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Floating label effect for form inputs
+        document.querySelectorAll('.floating-label input, .floating-label select, .floating-label textarea').forEach(input => {
+            // Check if input has value on page load
+            if (input.value) {
+                input.previousElementSibling.style.top = '4px';
+                input.previousElementSibling.style.fontSize = '12px';
+                input.previousElementSibling.style.color = '#3b82f6';
+            }
+            
+            input.addEventListener('focus', function() {
+                this.previousElementSibling.style.top = '4px';
+                this.previousElementSibling.style.fontSize = '12px';
+                this.previousElementSibling.style.color = '#3b82f6';
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.previousElementSibling.style.top = '16px';
+                    this.previousElementSibling.style.fontSize = '16px';
+                    this.previousElementSibling.style.color = '#64748b';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
