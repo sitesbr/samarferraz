@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos de Aula - Samar Ferraz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+            padding-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .most-popular::before {
+            content: "Mais Vendido";
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background-color: #E89C4C;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://i.imgur.com/OFtrjDJ.png" alt="Logo Samar Ferraz" class="h-12 mr-3">
+                <span class="text-2xl font-bold text-blue-900">Samar Ferraz</span>
+            </div>
+            
+            <!-- Menu Desktop -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="text-blue-900 hover:text-orange-500 transition">Início</a></li>
+                    <li><a href="#" class="text-blue-900 hover:text-orange-500 transition">Sobre</a></li>
+                    <li class="dropdown relative">
+                        <a href="#" class="text-blue-900 hover:text-orange-500 transition flex items-center">
+                            Método <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <ul class="dropdown-menu absolute hidden bg-white shadow-lg rounded py-2 w-48 mt-2">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Metodologia</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Planos de Aula</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Resultados</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="text-blue-900 hover:text-orange-500 transition">Depoimentos</a></li>
+                    <li><a href="#" class="text-blue-900 hover:text-orange-500 transition">Blog</a></li>
+                    <li><a href="#" class="text-blue-900 hover:text-orange-500 transition">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Botão Menu Mobile -->
+            <button class="md:hidden text-blue-900 focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div class="md:hidden hidden bg-white py-2 border-t" id="mobile-menu">
+            <ul class="flex flex-col px-4 space-y-3">
+                <li><a href="#" class="block py-2 text-blue-900 hover:text-orange-500">Início</a></li>
+                <li><a href="#" class="block py-2 text-blue-900 hover:text-orange-500">Sobre</a></li>
+                <li>
+                    <a href="#" class="block py-2 text-blue-900 hover:text-orange-500 flex items-center justify-between">
+                        Método <i class="fas fa-chevron-down text-xs"></i>
+                    </a>
+                    <ul class="pl-4 hidden" id="mobile-submenu">
+                        <li><a href="#" class="block py-2 text-blue-900 hover:text-orange-500">Metodologia</a></li>
+                        <li><a href="#" class="block py-2 text-blue-900 hover:text-orange-500">Planos de Aula</a></li>
+                        <li><a href="#" class="block py-2 text-blue-900 hover:text-orange-500">Resultados</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="block py-2 text-blue-900 hover:text-orange-500">Depoimentos</a></li>
+                <li><a href="#" class="block py-2 text-blue-900 hover:text-orange-500">Blog</a></li>
+                <li><a href="#" class="block py-2 text-blue-900 hover:text-orange-500">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Seção 1 - Introdução aos Planos -->
+    <section class="bg-white py-12 px-4 md:px-0">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Planos de Aula de Inglês 2025</h1>
+            <h2 class="text-2xl md:text-3xl text-orange-500 font-semibold mb-6">Escolha o plano que melhor se adapta aos seus objetivos e ritmo de aprendizado</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">Aqui você encontra opções de aulas que acompanham seu tempo, suas metas e sua rotina. Desde quem está começando, até quem precisa de uma imersão completa para alcançar a fluência.</p>
+        </div>
+    </section>
+
+    <!-- Seção 2 - Aula Experimental -->
+    <section class="bg-gray-100 py-12 px-4 md:px-0">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-10 bg-blue-900 text-white">
+                        <h2 class="text-3xl font-bold mb-4">Aula Experimental</h2>
+                        <p class="text-xl mb-6">Teste de Nivelamento – <span class="line-through">R$ 100,00</span> <span class="font-bold text-2xl">R$ 1,00</span></p>
+                        <p class="mb-6">Descubra seu nível de inglês e experimente nosso método com uma aula completa.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2"></i>
+                                <span>Avaliação de habilidades</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2"></i>
+                                <span>30 a 50 minutos de duração</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2"></i>
+                                <span>Cupom de 99% de desconto</span>
+                            </li>
+                        </ul>
+                        <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                            Agendar Aula
+                        </button>
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-10">
+                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Aula de Inglês" class="w-full h-64 object-cover rounded-lg mb-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-4">Experimente Sem Compromisso</h3>
+                        <p class="text-gray-700">Esta aula especial permite que você conheça nossa metodologia, avalie seu nível atual de inglês e receba recomendações personalizadas para seu aprendizado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 3 - Pacotes Mensais e Trimestrais -->
+    <section class="bg-white py-16 px-4 md:px-0">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-4">Planos Regulares</h2>
+            <h3 class="text-xl md:text-2xl text-orange-500 text-center mb-12">Aprendizado no seu Ritmo</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Plano Mensal -->
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-8 shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Plano Mensal</h3>
+                    <p class="text-3xl font-bold mb-2">R$ 800,00</p>
+                    <p class="text-gray-600 mb-6">(R$ 200 por aula)</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>4 aulas de 50 minutos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Material personalizado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Acesso a grupo exclusivo</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-full transition duration-300">
+                        Quero Este Plano
+                    </button>
+                </div>
+                
+                <!-- Plano Intensivo (Mais Vendido) -->
+                <div class="bg-white border-2 border-orange-300 rounded-lg p-8 shadow-md hover:shadow-xl relative most-popular">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">POPULAR</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Plano Intensivo</h3>
+                    <p class="text-3xl font-bold mb-2">R$ 1.440,00</p>
+                    <p class="text-gray-600 mb-6">(R$ 180 por aula)</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>8 aulas mensais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Foco em conversação</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Suporte via WhatsApp</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-full transition duration-300 transform hover:scale-105">
+                        Quero Economizar
+                    </button>
+                </div>
+                
+                <!-- Plano Trimestral -->
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-8 shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Plano Trimestral</h3>
+                    <p class="text-3xl font-bold mb-2">R$ 4.320,00</p>
+                    <p class="text-gray-600 mb-6">(R$ 180 por aula)</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>24 aulas em 3 meses</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Avaliações mensais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Feedback detalhado</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-full transition duration-300">
+                        Investir no Futuro
+                    </button>
+                </div>
+                
+                <!-- Plano Semestral -->
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-8 shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Plano Semestral</h3>
+                    <p class="text-3xl font-bold mb-2">R$ 7.680,00</p>
+                    <p class="text-gray-600 mb-6">(R$ 160 por aula)</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>48 aulas em 6 meses</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Avaliações bimestrais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Materiais complementares</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-full transition duration-300">
+                        Alcançar Fluência
+                    </button>
+                </div>
+                
+                <!-- Pacote Completo -->
+                <div class="bg-white border-2 border-blue-200 rounded-lg p-8 shadow-md hover:shadow-xl transition duration-300">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">COMPLETO</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Pacote Completo</h3>
+                    <p class="text-3xl font-bold mb-2">R$ 11.520,00</p>
+                    <p class="text-gray-600 mb-6">(R$ 160 por aula)</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>144 aulas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Avaliações entre níveis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Suporte contínuo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>3 níveis (Básico ao Avançado)</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-full transition duration-300">
+                        Inglês Completo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 4 - Planos Intensivos -->
+    <section class="bg-gray-100 py-16 px-4 md:px-0">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-4">Para Quem Quer Aprender Rápido</h2>
+            <h3 class="text-xl md:text-2xl text-orange-500 text-center mb-12">Planos Intensivos de Imersão</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Plano Intensivo -->
+                <div class="bg-white border-2 border-orange-300 rounded-lg p-8 shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Plano Intensivo</h3>
+                    <p class="text-3xl font-bold mb-2">R$ 1.800,00</p>
+                    <p class="text-gray-600 mb-6">(R$ 150 por aula)</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>12 aulas mensais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Foco em produção oral</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Material exclusivo</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-full transition duration-300">
+                        Aprender Rápido
+                    </button>
+                </div>
+                
+                <!-- Plano Trimestral Intensivo -->
+                <div class="bg-white border-2 border-orange-300 rounded-lg p-8 shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Plano Trimestral Intensivo</h3>
+                    <p class="text-3xl font-bold mb-2">R$ 5.400,00</p>
+                    <p class="text-gray-600 mb-6">(R$ 150 por aula)</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>36 aulas em 3 meses</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Avaliações mensais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Plano de estudo adaptado</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-full transition duration-300">
+                        Mergulhar no Inglês
+                    </button>
+                </div>
+                
+                <!-- Plano Semestral Intensivo -->
+                <div class="bg-white border-2 border-orange-300 rounded-lg p-8 shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Plano Semestral Intensivo</h3>
+                    <p class="text-3xl font-bold mb-2">R$ 10.800,00</p>
+                    <p class="text-gray-600 mb-6">(R$ 150 por aula)</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>72 aulas em 6 meses</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Avaliações bimestrais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Suporte adicional</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-full transition duration-300">
+                        Fluência Intensiva
+                    </button>
+                </div>
+                
+                <!-- Pacote Completo Intensivo -->
+                <div class="bg-white border-2 border-orange-400 rounded-lg p-8 shadow-md hover:shadow-xl transition duration-300">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">TOP</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Pacote Completo Intensivo</h3>
+                    <p class="text-3xl font-bold mb-2">R$ 18.000,00</p>
+                    <p class="text-gray-600 mb-6">(R$ 125 por aula)</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>144 aulas intensivas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Avaliações detalhadas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Materiais avançados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>3 níveis (Básico ao Avançado)</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-full transition duration-300 transform hover:scale-105">
+                        Inglês Completo Intensivo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 5 - Dúvidas Frequentes -->
+    <section class="bg-white py-16 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">Perguntas Frequentes</h2>
+            
+            <div class="space-y-4">
+                <!-- Pergunta 1 -->
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="accordion-btn flex justify-between items-center w-full text-left focus:outline-none" aria-expanded="false" data-target="accordion1">
+                        <span class="text-lg font-medium text-blue-900">O que acontece se eu perder uma aula?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content transition-all" id="accordion1">
+                        <p class="pt-4 text-gray-700">Se você avisar com pelo menos 12 horas de antecedência, podemos reagendar sua aula sem custo adicional. Para cancelamentos em cima da hora ou não comparecimento, a aula é considerada consumida.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 2 -->
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="accordion-btn flex justify-between items-center w-full text-left focus:outline-none" data-target="accordion2">
+                        <span class="text-lg font-medium text-blue-900">Posso mudar de plano depois?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content transition-all" id="accordion2">
+                        <p class="pt-4 text-gray-700">Sim! Você pode solicitar a mudança para outro plano a qualquer momento. O valor das aulas já realizadas será descontado do novo pacote, de acordo com o valor proporcional do plano original.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 3 -->
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="accordion-btn flex justify-between items-center w-full text-left focus:outline-none" data-target="accordion3">
+                        <span class="text-lg font-medium text-blue-900">Posso pagar parcelado?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content transition-all" id="accordion3">
+                        <p class="pt-4 text-gray-700">Oferecemos opções de parcelamento em até 12x no cartão de crédito (com juros da operadora) ou parcelamento direto conosco em até 4x sem juros para planos trimestrais ou maiores.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 4 -->
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="accordion-btn flex justify-between items-center w-full text-left focus:outline-none" data-target="accordion4">
+                        <span class="text-lg font-medium text-blue-900">Como funciona a aula experimental?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content transition-all" id="accordion4">
+                        <p class="pt-4 text-gray-700">A aula experimental de R$1 inclui um teste de nivelamento e uma aula completa onde você experimenta nossa metodologia. Ao final, você receberá um relatório com seu nível atual e sugestões personalizadas. Se gostar e quiser continuar, o valor investido será descontado no seu primeiro pacote.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 5 -->
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="accordion-btn flex justify-between items-center w-full text-left focus:outline-none" data-target="accordion5">
+                        <span class="text-lg font-medium text-blue-900">Posso começar mesmo sem saber nada de inglês?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content transition-all" id="accordion5">
+                        <p class="pt-4 text-gray-700">Claro! Temos um plano específico para iniciantes absolutos. Nossa metodologia começa do zero, de forma leve e gradual, garantindo que você desenvolva bases sólidas antes de avançar para conteúdos mais complexos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 6 - CTA Final -->
+    <section class="bg-orange-500 py-16 px-4 md:px-0">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">
+                Escolha seu plano, comece com a aula de R$1 e veja como aprender inglês pode ser mais simples, leve e eficaz
+            </h2>
+            <button class="bg-white hover:bg-gray-100 text-blue-900 font-bold py-4 px-12 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                Agendar Aula Experimental
+            </button>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-blue-900 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-6">
+                        <img src="https://i.imgur.com/OFtrjDJ.png" alt="Logo Samar Ferraz" class="h-12 mr-3">
+                        <span class="text-2xl font-bold">Samar Ferraz</span>
+                    </div>
+                    <p class="mb-6">"Inglês com empatia, resultado e você no centro de tudo."</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-orange-300"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-white hover:text-orange-300"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-white hover:text-orange-300"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold mb-6">Links Úteis</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-orange-300 transition">Termos de uso</a></li>
+                        <li><a href="#" class="hover:text-orange-300 transition">Política de privacidade</a></li>
+                        <li><a href="#" class="hover:text-orange-300 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-orange-300 transition">Depoimentos</a></li>
+                        <li><a href="#" class="hover:text-orange-300 transition">Método de ensino</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Contato</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>email@samarferraz.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fab fa-whatsapp mt-1 mr-3"></i>
+                            <span>(XX) XXXX-XXXX</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-12 pt-8 text-center text-sm">
+                <p>© 2025 Samar Ferraz – Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        document.querySelector('[data-target="mobile-submenu"]').addEventListener('click', function(e) {
+            if (e.target.tagName === 'A' || e.target.tagName === 'I') {
+                const submenu = document.getElementById('mobile-submenu');
+                submenu.classList.toggle('hidden');
+                const icon = e.currentTarget.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            }
+        });
+        
+        // Accordion FAQ
+        document.querySelectorAll('.accordion-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const content = document.getElementById(targetId);
+                const icon = this.querySelector('i');
+                const isActive = content.classList.contains('active');
+
+                // Fecha todos os outros accordions primeiro
+                document.querySelectorAll('.accordion-content').forEach(item => {
+                    if (item.id !== targetId) {
+                        item.classList.remove('active');
+                        const otherIcon = item.previousElementSibling?.querySelector('i');
+                        if (otherIcon) {
+                            otherIcon.classList.remove('fa-chevron-up');
+                            otherIcon.classList.add('fa-chevron-down');
+                        }
+                    }
+                });
+
+                // Alterna o estado clicado
+                content.classList.toggle('active');
+                
+                // Alterna o ícone
+                if (isActive) {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
